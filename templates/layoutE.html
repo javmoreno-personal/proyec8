@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/CssAdmin.css' ) }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/CssLayout.css' ) }}"> 
     <title>Layout Student</title>
   </head>
   <body>
@@ -36,15 +36,18 @@
         </div>
 		<nav>	
 			<div class="Margen">
-			<a href="#">Cursos</a>
+			<a href="/Estudiante/cursos">Cursos</a>
             </div>  
-			<a href="#">Actividades</a>
+			<a href="Estudiante/actividades">Actividades</a>
 			<a href="#">Entregas</a>
-            <a href="#">Perfil</a>
-            <a href="#">Asignaturas</a>
-            <a href="#">Novedades</a>
+            <a href="/Estudiante/perfil">Perfil</a>
+            <a href="/Estudiante/asignaturas">Asignaturas</a>
+            <a href="/Estudiante/novedades">Novedades</a>
             <br><br><br>
-            <a href="#">Cerrar Sesion</a> 
+            <div class=out>
+              <img src="/static/img/out.svg" >
+            <a href=/Login>Cerrar Sesion</a> 
+            </div>
 		</nav>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect
 
+# Aqui vienen las rutas de Estudiante.
 app = Flask(__name__)
 @app.route('/')
 def login():
@@ -44,4 +45,11 @@ def Opion6():
 @app.route('/Estudiante/CerrarSesion')
 def Opion7():
     return render_template('Login.html')
-     
+
+
+
+# Aqui vienen las rutas de docente... 
+
+
+
+# Aqui vienen las rutas de Administrador
