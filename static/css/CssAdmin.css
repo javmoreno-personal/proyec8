@@ -1,0 +1,105 @@
+/*Tipo de letra */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+
+	
+	/*Estilos para el encabezado*/
+	.header{
+		width: 80%;
+		height: 80px;
+		position: fixed;
+		top: 0;right: 0;
+        background-color: rgb(255, 255, 255);
+	}
+    /* Le estoy diciendo aqui que ocupe el 90% del header :v*/
+	.contenedor{
+		width: 90%;
+		margin: auto;
+	}
+
+	
+	
+	.contenedor .menu{
+		float: right;
+		line-height: 80px;
+	}
+	.contenedor .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #000;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		/* margin-right: 5px; */
+	}
+	.contenedor .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+  
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	
+	.contenedor-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 20%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		
+    }
+	
+
+/* Definir posicicon del perfil que ingresa (estudiante, administrado o docente*/	
+.logo{
+    position: absolute;
+    width: 153px;
+    height: 35px;
+    left: 12%;
+    top: 5%;
+    
+}
+/* Aca se contrala el tamaño del titulo de perfil. */
+.logo h1{
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+/*para organizar las opciones del menu*/
+.Margen {
+    margin-top: 30%;
+}
+/* Cuadro del menu de opciones vertical */
+.cont-menu{
+		
+    position: absolute;
+    width: 100%;
+    background: #3164F4;
+    height: 100vh;
+    transition: all 500ms ease;
+    
+}
+/*estilo de los links */
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #ffffff; 
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #5c84f3;
+    background: #4f9fd4;
+    color: #ffffff;
+    cursor: pointer;
+}
