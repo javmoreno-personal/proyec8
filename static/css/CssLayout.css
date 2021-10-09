@@ -82,38 +82,39 @@
     margin-top: 30%;
 }
 /* Cuadro del menu de opciones vertical */
-.cont-menu{
+.conte-menu{
 		
     position: absolute;
     width: 100%;
     background: #3164F4;
     height: 100vh;
     transition: all 500ms ease;
+	
     
 }
 /*estilo de los links */
-.cont-menu nav a{
+.conte-menu nav a{
     display: block;
 	width: 100%;
     text-decoration: none;
     padding: 20px;
     color: #ffffff; 
-	top:50%;
+	
 }
-.cont-menu nav a:hover{
+.conte-menu nav a:hover{
     border-left: 5px solid #5c84f3;
     background: #4f9fd4;
     color: #ffffff;
     cursor: pointer;
-	top:50%;
+
 }
 
 
 /* Estilo de Icon cerrar Sesion*/
-.cont-menu .out{
+.conte-menu .out{
 	width: 100%;
 }
-.cont-menu .out img{
+.conte-menu .out img{
 	float:left;	
 	width:24px;
 	height: 24px;
