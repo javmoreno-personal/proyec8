@@ -21,7 +21,7 @@
     /* Le estoy diciendo aqui que ocupe el 90% del header :v*/
 	.contenedor{
 		width: 90%;
-		margin: auto;
+		
 	}
 
 	
@@ -118,7 +118,7 @@
 	width:24px;
 	height: 24px;
 	margin-left: 10%;
-	top:50%;
+	
 	
 }
 

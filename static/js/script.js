@@ -8,3 +8,6 @@ function mostrarPassword(){
         $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
     }
 } 
+
+
+

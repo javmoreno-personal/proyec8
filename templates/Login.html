@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>PROYECTO 8 | IMPERIUM</title>
+     <!-- Required meta tags -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--CSS NORMAL-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/CssLogin.css' ) }}"> 
-  <body>
-    <!---Links referentes a BootStrap (Boton de mostrar y ocultar contraseña)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--CSS BootStrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PROYECTO 8 | IMPERIUM</title>
+    <body>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
@@ -21,7 +26,6 @@
         <div class="container">
         <div class="row">
         <div class="container-fluid">
-
         <!-- USERNAME INPUT -->
         <label for="username">Usuario</label>
         <input type="text" placeholder="Escriba Usuario">
