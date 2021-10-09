@@ -16,13 +16,13 @@ def Estudiante():
     return render_template('Estudiante/Estudiante.html')
 
 
-@app.route('/Estudiante/Cursos')
+@app.route('/Estudiante/cursos')
 def Opcion1():
     return render_template('Estudiante/Cursos.html')
 
-@app.route('/Estudiante/activiades')
+@app.route('/Estudiante/actividades')
 def Opion2():
-    return render_template('Estudiante/actividades.html.html')
+    return render_template('Estudiante/actividades.html')
 
 @app.route('/Estudiante/entregas')
 def Opion3():
@@ -40,11 +40,9 @@ def Opion5():
 def Opion6():
     return render_template('Estudiante/novedades.html')
 
-
-
-@app.route('/Estudiante/CerrarSesion')
+@app.route('/Login')
 def Opion7():
-    return render_template('Login.html')
+    return login()
 
 
 
@@ -52,4 +50,4 @@ def Opion7():
 
 
 
-# Aqui vienen las rutas de Administrador
+# Aqui vienen las rutas de Administrador...
