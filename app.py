@@ -44,6 +44,10 @@ def Opion6():
 def Opion7():
     return login()
 
+@app.route('/Prueba')
+def Opion8():
+    return render_template('layout2.html')
+
 
 
 # Aqui vienen las rutas de docente... 

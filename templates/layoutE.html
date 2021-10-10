@@ -11,56 +11,105 @@
     
     <!--Css BootStrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Iconos BoootStrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     
     
     <title>Layout Student</title>
   </head>
   <body>
+  <main>
+    <div>
     <header class="header">
-		<div class="contenedor">
-			<nav class="menu">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-                  </svg>
-				<a href="#">Pepito Perez</a>
-				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                  </svg>
-			</nav>
-		</div>
+		<div class="container">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="/Estudiante/novedades" class=icon-campana>
+              <i class="bi bi-bell-fill"></i>
+            </a>
+          </li>
+          <li class=nav-item> 
+            <a>Pepito Perez</a> 
+          </li>
+          <li class=nav-item>
+            <a>
+              <i class="bi bi-person-circle"></i>
+            </a>
+          </li>
+        </ul>
 	</header>
+    </div>
     {% block contenido %}
 
     {% endblock %}
 <!--	--------------->
 
 <div class="contenedor-menu">
-   
-	<div class="conte-menu" >
-        <div class="logo"> <!--Este div es necesario para poder acomodar el menu :v-->
-            <h1>Estudiante</h1>
-        </div>
-		<nav>	
-			<div class="Margen">
-			<a href="/Estudiante/cursos">Cursos</a>
-            </div>  
-			<a href="/Estudiante/actividades">Actividades</a>
-			<a href="/Estudiante/entregas">Entregas</a>
-            <a href="/Estudiante/perfil">Perfil</a>
-            <a href="/Estudiante/asignaturas">Asignaturas</a>
-            <a href="/Estudiante/novedades">Novedades</a>
-            <br><br>
-            <div class=out>
-              <img src="/static/img/out.svg" >
-            <a href=/Login>Cerrar Sesion</a> 
-            </div>
-		</nav>
-	</div>
-</div>
-
-
+	<div class="conte-menu text-white" >
+    <nav >
+      <a>
+      <i class="bi bi-bullseye"></i>
+      <span>Estudiante</span>
+     </a>
+  <hr>
+     <ul class="nav nav-pills">  
+      <li>
+        <a  href="/Estudiante/perfil" >
+          <i class="bi bi-people-fill"></i>
+          <span>Area Personal</span>
+        </a>
+      </li>
+      <li>
+        <a href="/Estudiante/cursos">
+          <i class="bi bi-journal-text"></i>
+          <span>Matricular Asignaturas</span>
+        </a>
+      </li>
+      <li>
+        <a href="/Estudiante/actividades">
+          <i class="bi bi-journal-arrow-down"></i>
+          <span>Actividades</span>
+        </a>
+      </li>
+      <li>
+        <a href="/Estudiante/entregas">
+          <i class="bi bi-journal-arrow-up"></i>
+          <span>Entregas</span>
+        </a>
+      </li>
+      <li>
+        <a href="/Estudiante/novedades">
+          <i class="bi bi-journals"></i>
+          <span>Novedades</span>
+        </a>
+      </li>
+      <li>
+          <div class="dropdown">
+            <a class="btn btn-primary dropdown-toggle" hred="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-journal-text"></i>
+              <span>Asignaturas</span>
+            </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="/Estudiante/asigtatura/#" >Action</a></li>
+            <li><a class="dropdown-item" href="/Estudiante/asigtatura/#" > Other Action</a></li>
+          </ul>
+        </div>  
+      </li>
+    </ul>
+      <hr>
+      <li class=out>
+        <a href="/Login">
+          <i class="bi bi-box-arrow-in-left"></i>
+          <span>Cerrar Sesion</span>
+        </a>
+      </li>
+   </nav>      
+</div> 
+  </div>
+  
+  <div class="divider"></div>
+</main>
 
 <!-- Optional JavaScript; choose one of the two! BootStrap-->
 
