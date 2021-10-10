@@ -15,7 +15,6 @@ def layout():
 def Estudiante():
     return render_template('Estudiante/Estudiante.html')
 
-
 @app.route('/Estudiante/cursos')
 def Opcion1():
     return render_template('Estudiante/Cursos.html')

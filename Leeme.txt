@@ -1,0 +1,51 @@
+/// Paquetes usados
+
+backports.entry-points-selectable==1.1.0
+click==8.0.1
+colorama==0.4.4
+distlib==0.3.3
+filelock==3.1.0
+Flask==2.0.1
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+platformdirs==2.4.0
+six==1.16.0
+virtualenv==20.8.1
+virtualenvwrapper-win==1.2.6
+Werkzeug==2.0.1
+
+//Codigos Flask 
+
+1. Instalar entorno: pip install virtualenv
+2. Instalar entorno: pip install flask
+3. Activar: python3 -m venv entorno
+4. Entra a carpeta: .\entorno\scripts\activate
+
+////////////
+En caso de:
+ ERROR (.\entorno\Scripts\activate : No se puede cargar el archivo 
+E:\Escritorio\Prueba2\entorno\Scripts\Activate.ps1 porque la ejecución de scripts está deshabilitada en     
+este sistema. Para obtener más información, consulta el tema about_Execution_Policies en 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+2. Ejecutamos el sigueinte codigo en powerShell:  Set-ExecutionPolicy Unrestricted
+y volvemos a ejecutar en la terminal del proyecto: 
+Codigo 1: python3 -m venv entorno (Crear Entorno)
+Codigo2: .\entorno\scripts\activate (Activar Entorno)
+Codigo 3: flask run --debugger
+
+
+FLASK_ENV=development (activar sobre la marcha)
+
+
+//// powershell 
+
+$env:FLASK_APP = "app.py"
+$env:FLASK_ENV = "development"
+flask run
+
+//Poner en APP.PY en caso de que el debbug no se active con los codigos anteriores
+
+if __name__ == "__main__":
+    app.run(debug=True)
