@@ -1,12 +1,18 @@
 from flask import Flask, render_template, redirect
 
-# Aqui vienen las rutas de Estudiante.
+
 app = Flask(__name__)
+#Rutas generales :v
+
 @app.route('/')
 def login():
     return render_template('Login.html')
 
+@app.route('/Login')
+def CerrarSesion():
+    return login()
 
+# Aqui vienen las rutas de Estudiante.
 @app.route('/plantilla')
 def layout():
     return render_template('layoutE.html')
@@ -39,18 +45,74 @@ def Opion5():
 def Opion6():
     return render_template('Estudiante/novedades.html')
 
-@app.route('/Login')
-def Opion7():
-    return login()
-
-@app.route('/Prueba')
-def Opion8():
-    return render_template('layout2.html')
+#Rutas de Docente
 
 
+@app.route('/Docente')
+def Docente():
+    return render_template('/Docente/Docente.html')
 
-# Aqui vienen las rutas de docente... 
+@app.route("/plantillaD")
+def plantilla():
+    return render_template("layoutD.html")
+
+@app.route("/Docente/perfilD")
+def PerfilD():
+    return render_template("Docente/perfilD.html")
+
+@app.route("/Docente/cursod")
+def CursoD():
+    return render_template("Docente/CursoD.html")
+
+@app.route("/Docente/Actividades/revisar")
+def AsignarTareas():
+    return render_template("Docente/Actividades/asignar.html")
+
+@app.route("/Docente/Actividades/Calificar")
+def CalificarTareas():
+    return render_template("Docente/Actividades/Calificar.html")
+
+@app.route("/Docente/Calendario")
+def Calendario():
+    return render_template("Docente/Calendario.html")
 
 
+#Rutas SuperAdministrador
 
-# Aqui vienen las rutas de Administrador...
+
+@app.route('/Administrador')
+def logiS():
+    return render_template('Administrador/Admin.html')
+
+@app.route("/plantillaS")
+def plantillaS():
+    return render_template("layoutS.html")
+
+@app.route("/Administrador/PerfilS")
+def PerfilS():
+    return render_template("Administrador/PerfilS.html")
+
+@app.route("/Administrador/GestiondeCursos")
+def GestiondeCursos():
+    return render_template("Administrador/GestionCurso.html")
+
+@app.route("/Administrador/CrearUsuarioRoles")
+def CrearUsuarioR():
+    return render_template("Administrador/CrearUaR.html")
+
+@app.route("/Administrador/GestiondeUsuarios")
+def GestiondeUsuarios():
+    return render_template("Administrador/GestionUsuarios.html")
+
+@app.route("/Administrador/VisualizarUsuarios")
+def VisualizarUsuariosS():
+    return render_template("Administrador/VisualizarUsuarios.html")
+
+@app.route("/Administrador/CrearAsignatura")
+def CrearAsignatura():
+    return render_template("Administrador/CrearAsignatura.html")
+
+@app.route("/Administrador/Calendario")
+def CalendarioS():
+    return render_template("Administrador/CalendarioS.html")
+
