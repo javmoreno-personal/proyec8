@@ -31,8 +31,8 @@ https:/go.microsoft.com/fwlink/?LinkID=135170.
 
 2. Ejecutamos el sigueinte codigo en powerShell:  Set-ExecutionPolicy Unrestricted
 y volvemos a ejecutar en la terminal del proyecto: 
-Codigo 1: python3 -m venv entorno (Crear Entorno)
 Codigo2: .\entorno\scripts\activate (Activar Entorno)
+Codigo 1: python3 -m venv entorno (Crear Entorno)
 Codigo 3: flask run --debugger
 
 
