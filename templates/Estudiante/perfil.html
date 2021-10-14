@@ -1,17 +1,42 @@
 {% extends 'layoutE.html' %}
 
-
-<!-- Estilos del menu estudiante.... -->
 {% block contenido %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
+<div class="vista">
+    <div class="marco">
+        <section class="seccion">
+            <h2>Información personal</h2>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}"> 
-<section>
-<div class=prueba2>
-    <ul>
-        <li>Si funciono</li>
-        <li>Si o si</li>
+            <div class="circulo">
+                <img src="/static/img/perfil.png" class="avatar-est">
+            </div>
 
-    </ul> 
+           <div class="vistas">
+                <div id="ed">
+                    <label for="nombre">Nombre Completo:</label>
+                </div>
+
+                <div id="ed">
+                    <label for="Correo">Correo electrónico:</label>
+                </div>
+
+                <div id="ed">
+                    <label for="Rol">Rol:</label>
+                </div>
+
+                <div id="ed">
+                    <label for="Cel">Contacto:</label>
+                </div>
+
+                <div id="ed">
+                    <label for="id">Id:</label>
+                </div>
+           </div>
+            <div id="edi">
+            <img src="/static/img/editar.png" class="editar">
+        </div>
+        </section>
+    </div>
 </div>
-</section>
+
 {% endblock %}

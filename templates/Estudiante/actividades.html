@@ -1,6 +1,33 @@
 {% extends 'layoutE.html' %}
 
 {% block contenido %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
+<div class="vista">
+    <div class="marco5">
+        <section class="seccion5">
+            <h2>Actividades:</h2>
+            <div class="acti">
+
+                <div id="act">
+                    <h4><a href="#">Trabajo 1 : ciencia</a> </h4>
+                    <h6>Descripción:</h6>
+                    <p>********</p>
+                    <img src="/static/img/—Pngtree—file download icon_4720205.png" class="descarga">
+                </div>
+                <div id="act">
+                    <h4><a href="#">Trabajo 1: literatura</a></h4>
+                    
+                </div>
+                <div id="act" >
+                    <h4><a href="#">Trabajo 2: ciencia</a></h4>
+                </div>
+                <div id="act">
+                    <h4><a href="#">Trabajo 1: matematica </a></h4>
+                    </div>
+            </div>
+        </section>
+    </div>
+</div>
 
 
 {% endblock %}

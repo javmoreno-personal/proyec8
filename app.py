@@ -1,6 +1,8 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request, url_for, session  # Riderec / reques y url for son para redireccionamineto y session es para cerrar las sesiones. :v
+#from flask_mysqldb import MySQL, MySQLdb  # Pip install Flask-MySQLdb
 
 
+# Conexion con la base de datos :v
 
 app = Flask(__name__)
 #Rutas generales :v
@@ -12,20 +14,18 @@ def login():
 @app.route('/Login', methods=["GET", "POST"])
 def CerrarSesion():
     return login()
-
-
-
+    
 # LAYOUTS.. 
-@app.route('/plantilla')
+@app.route('/plantilla'  , methods=["GET"])
 def layout():
-    return render_template('layoutE.html' , methods=["GET"])
+    return render_template('layoutE.html')
 
-@app.route("/plantillaS")
+@app.route("/plantillaS"  , methods=["GET"])
 def plantillaS():
     return render_template("layoutS.html")
 
 
-@app.route("/plantillaD")
+@app.route("/plantillaD"  , methods=["GET"])
 def plantilla():
     return render_template("layoutD.html")
 
@@ -53,19 +53,19 @@ def Opion3():
 def Opion4():
     return render_template('Estudiante/perfil.html', methods=["GET", "POST"])
 
-@app.route('/Estudiante/Calificaciones', methods=["POST"])
+@app.route('/Estudiante/Calificaciones', methods=["GET","POST"])
 def Opion5():
-    return render_template('Estudiante/Calificaciones.html')
+    return render_template('Estudiante/Calificaciones.html')  # Notas y promedios por materias v
 
-@app.route('/Estudiante/novedades', methods=["POST"])
+@app.route('/Estudiante/novedades', methods=["GET","POST"])
 def Opion6():
     return render_template('Estudiante/novedades.html')
 
-@app.route("/Estudiante/asignaturas/matricular", methods=["GET", "POST"])
+@app.route("/Estudiante/asignaturas/matricular", methods=["GET", "POST"]) # Matricular materias 
 def opcion7():
     return render_template("Estudiante/Asignaturas/Matricular.html")
 
-@app.route("/Estudiante/asignaturas/materias",  methods=["GET", "POST"])
+@app.route("/Estudiante/asignaturas/materias",  methods=["GET", "POST"]) # Lista materias matriculadas
 def Opcion8():
     return render_template("/Estudiante/asignaturas/MisMaterias.html")
 
@@ -74,7 +74,7 @@ def Opcion8():
 #Rutas de Docente
 
 
-@app.route('/Docente')
+@app.route('/Docente' , methods=["GET"])
 def Docente():
     return render_template('/Docente/Docente.html')
 
@@ -95,15 +95,15 @@ def AsignarTareas():
 def CalificarTareas():
     return render_template("Docente/Actividades/Calificar.html")
 
-@app.route("/Docente/Calendario")
+@app.route("/Docente/novedades" , methods=["GET"])
 def Calendario():
-    return render_template("Docente/Calendario.html")
+    return render_template("Docente/novedades.html")
 
 
 #Rutas SuperAdministrador
 
 
-@app.route('/Administrador')
+@app.route('/Administrador' , methods=["GET"])
 def logiS():
     return render_template('Administrador/Admin.html')
 
@@ -111,27 +111,32 @@ def logiS():
 def PerfilS():
     return render_template("Administrador/PerfilS.html")
 
-@app.route("/Administrador/GestiondeCursos", methods=["GET", "POST"])
+@app.route("/Administrador/GestiondeCursos", methods=["GET", "POST"]) # 
 def GestiondeCursos():
     return render_template("Administrador/GestionCurso.html")
 
-@app.route("/Administrador/CrearUsuarioRoles", methods=["GET", "POST"])
+@app.route("/Administrador/CrearUsuarios", methods=["GET", "POST"])
 def CrearUsuarioR():
-    return render_template("Administrador/CrearUaR.html")
+    return render_template("/Administrador/GestionUsuarios/CrearUsuario.html")
 
-@app.route("/Administrador/GestiondeUsuarios", methods=["GET", "POST"])
+
+
+""" @app.route("/Administrador/GestiondeUsuarios", methods=["GET", "POST"])
 def GestiondeUsuarios():
     return render_template("Administrador/GestionUsuarios.html")
+    
+ """
+
 
 @app.route("/Administrador/VisualizarUsuarios", methods=["GET", "POST"])
 def VisualizarUsuariosS():
-    return render_template("Administrador/VisualizarUsuarios.html")
+    return render_template("Administrador/GestionUsuarios/VisualizarUsuarios.html")
 
 @app.route("/Administrador/CrearAsignatura", methods=["GET", "POST"])
 def CrearAsignatura():
     return render_template("Administrador/CrearAsignatura.html")
 
-@app.route("/Administrador/Calendario", methods=["GET", "POST"])
+@app.route("/Administrador/novedades", methods=["GET", "POST"])
 def CalendarioS():
-    return render_template("Administrador/CalendarioS.html")
+    return render_template("Administrador/novedades.html")
 
