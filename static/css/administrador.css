@@ -1,0 +1,22 @@
+.section {
+    padding-top: 10%;
+    position: fixed;
+    width: 80%;
+    height: 97%;
+    right: 0;
+    top: 10%;
+    background: #fff;
+}
+
+.cajaPrincipal {
+    position: absolute;
+    width: 96%;
+    height: 90%;
+    margin: auto;
+    top: 2%;
+    left: 2%;
+    background-color: rgb(255, 255, 255);
+    /* Shadow */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
