@@ -1,6 +1,63 @@
-{% extends 'layoutD.html' %}
+{% extends 'layoutD.html' %} {% block contenido %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
+<div class="vista">
+    <div class="marco">
+        <section class="perfil-usuario">
+            <div class="contenedor-perfil">
+                <div class="portada-perfil" style="background-image: url('/static/img/paisaje.jpg');">
+                    <div class="sombra"></div>
+                    <div class="avatar-perfil">
+                        <img src='/static/img/Johan.jpg' alt="img">
+                        <a href="#" class="cambiar-foto">
+                            <i class="fas fa-camera"></i>
+                            <span>Cambiar foto</span>
+                        </a>
+                    </div>
+                    <div class="datos-perfil">
+                        <h4 class="titulo-usuario">Johan David Acosta</h4>
+                        <p class="bio-usuario">Programador, Escritor profesional y una leyenda viviente.</p>
+                    </div>
+                    <div class="opcciones-perfil">
+                        <button type="">Cambiar portada</button>
+                        <button type=""><i class="fas fa-wrench"></i></button>
+                    </div>
+                </div>
 
-{% block contenido %}
+            </div>
 
+        </section>
+
+        <div class="vistas">
+            <div id="editar">
+                <label for="nombre">Nombre Completo:</label>
+            </div>
+
+            <div id="ed">
+                <label for="nombre">Informacion Basica:</label>
+            </div>
+
+            <div id="ed">
+                <label for="Correo">Correo electrónico:</label>
+            </div>
+
+            <div id="ed">
+                <label for="Rol">Rol:</label>
+            </div>
+
+            <div id="ed">
+                <label for="Cel">Numero Telefonico:</label>
+            </div>
+
+            <div id="ed">
+                <label for="id">Id:</label>
+            </div>
+
+            <div id="ed">
+                <label for="id">Cambiar Contraseña:</label>
+            </div>
+        </div>
+        </section>
+    </div>
+</div>
 
 {% endblock %}

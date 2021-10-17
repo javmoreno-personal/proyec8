@@ -1,7 +1,30 @@
-{% extends 'layoutE.html' %}
-
-{% block contenido %}
-
+{% extends 'layoutE.html' %} {% block contenido %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
+<div class="vista">
+    <div class="marco4">
+        <section class="seccion4">
+            <h2>Novedades</h2>
+            <div class="matricula">
+                <img src="/static/img/matrícula-online-pasos.png" class="inscripcion">
+                <h3 id="matr"> Matrículas abiertas</h3>
+                <br id="salto">
+                <div id="boton">
+                    <h3> CLIC AQUÍ</h3>
+                </div>
+            </div>
+            <h2>Notificaciones</h2>
+            <br>
+            <div class="noti">
+                <a href="#">Variable</a>
+                <br>
+                <a href="#">Variable</a>
+                <br>
+                <a href="#">Variable</a>
+                <br>
+                <!-- aca hay que colocar un clico por noti y modificar a lista con barra de movimiento-->
+            </div>
+        </section>
+    </div>
+</div>
 
 {% endblock %}
-s

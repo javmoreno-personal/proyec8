@@ -1,6 +1,80 @@
-{% extends 'layoutE.html' %}
+{% extends 'layoutE.html' %} {% block contenido %}
 
-{% block contenido %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
+<div class="vista">
+    <div class="marco7">
+        <section class="seccion7">
+            <h2>Matriculas:</h2>
+            <br>
+            <div class="seleccion">
+                <p> Selecciona los siquientes items para matricularte con (horario/lugar) de la asignatura que elijas:
+                    <br> <br> Ciudad: <select name="" id=""><option> </option> <option>Barranquilla</option></select> &nbsp; Sede: <select name="" id=""><option> </option> <option>Sede1</option> <option>Sede2</option> </select> &nbsp; Horario:
+                    <select
+                        name="" id="">
+                        <option> </option>
+                        <option>Diurno</option>
+                        <option>Nocturno</option>
+                        </select>
+                        &nbsp; Asignatura:
+                        <select name="" id="">
+                        <option> </option>
+                        <option>Biología</option>
+                        <option>Matemáticas</option>
+                        <option>Ciencia Sociales</option>
+                        <option>Química</option>
+                        <option>laboratorio</option>
+                        <option>Ofimática</option>
+                        <option>Religión</option>
+                        <option>Física</option>
+                    </select> &nbsp;
+                        <button>Consultar</button>
+                </p>
+            </div>
+            <div class="descripcion">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <br>
+                <button>Matricular</button>
+                <br><br>
+                <h3>Profesor: Fulano de tal - BIOLOGÍA</h3>
+                <p>
+                    Descripción breve del curso, pequeño listado de contenido a estudiar y metodología. fechas de programación,
+                </p>
+                <br>
+                <button>Matricular</button>
+            </div>
+            <!--<div class="lista-tutor">
 
+                <div id="profe1">
+                    <p><a href="#">tutor: Fulano de tal-biologia</a> </p>
+                </div>
+                <div id="profe2">
+                    <p><a href="#">tutor: luruaco-matematica</h3>
+                </div>
+                <div id="profe3" >
+                    <p><a href="#">tutor: tintinela- ciencia</a></p>
+                </div>
+                <div id="profe4">
+                    <p><a href="#">tutor: Sake sedeaqui-Psicotapada</a></p>
+                    </div>
+            </div>
+            <div class="franja">
+
+                <div id="am">
+                    <h3><a href="#">diurna</a> </h3>
+                </div>
+                <br>
+                <div id="pm">
+                    <h3><a href="#">nocturna</a> </h3>
+                </div>
+            </div> -->
+
+
+        </section>
+    </div>
+</div>
 
 {% endblock %}

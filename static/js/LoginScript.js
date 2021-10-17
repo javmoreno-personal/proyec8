@@ -1,13 +1,10 @@
-function mostrarPassword(){
+function mostrarPassword() {
     var cambio = document.getElementById("txtPassword");
-    if(cambio.type == "password"){
+    if (cambio.type == "password") {
         cambio.type = "text";
         $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
-    }else{
+    } else {
         cambio.type = "password";
         $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
     }
-} 
-
-
-
+}
