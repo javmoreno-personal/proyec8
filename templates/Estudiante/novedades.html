@@ -1,30 +1,93 @@
-{% extends 'layoutE.html' %} {% block contenido %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/estudiante.css' ) }}">
-<div class="vista">
-    <div class="marco4">
-        <section class="seccion4">
-            <h2>Novedades</h2>
-            <div class="matricula">
-                <img src="/static/img/matrícula-online-pasos.png" class="inscripcion">
-                <h3 id="matr"> Matrículas abiertas</h3>
-                <br id="salto">
-                <div id="boton">
-                    <h3> CLIC AQUÍ</h3>
+{% extends 'layoutS.html' %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="/static/css/CssNovedades.CSS">
+<!--<link rel="stylesheet" href="/static/css/iconosnotificacion.css">-->
+
+
+        <section class="seccion5">
+            <div class="prueba" >
+            <h1><a href="#">
+                <i class="bi bi-bell"></i>
+                <span>Notificaciones</span>
+            </a>
+
+            </h1>
+            <div class="notificacion">
+                <hr>
+                
+                <div id="revisar" style="width: 1002px;" class= "btn btn-secundary">
+                    <h4>
+                        <a href="#">
+                            <i class="bi bi-check2-circle"></i>
+                            <span >Calificado Trabajo 2 Ciencias</span>
+                            </a>
+                    </h4>
                 </div>
+                <hr>
+
+
+                <div id="revisar" style="width: 1002px;" class= "btn btn-secundary">
+                    <h4>
+                        <a href="#">
+                            <i class="bi bi-check2-circle"></i>
+                            <span >Calificado Trabajo 1 Ciencias</span>
+                            </a>
+                    </h4>
+                </div>
+                <hr>
+
+
+                <div id="revisar" style="width: 1002px;" class= "btn btn-secundary">
+                    <h4>
+                        <a href="#">
+                            <i class="bi bi-check2-circle"></i>
+                            <span >Calificado Trabajo 1 Literatura</span>
+                            </a>
+                    </h4>
+                </div>
+                <hr>
+
+
+                <div id="revisar" style="width: 1002px;" class= "btn btn-secundary">
+                    <strong class="mb-1"></strong>
+                    <h4>
+                        <a href="#">
+                            <i class="bi bi-chat-square-text"></i>
+                            <span >Docente Javier ha comentado en Trabajo 2 Ciencias</span>
+                            </a>
+                    </h4>
+                </div>
+                <hr>
+
+
+
+
+                
+                   <!-- <div class="btn btn-secundary">
+                      <strong class="mb-1">List group item heading</strong>
+                      <small class="text-muted">Wed</small>
+                    </div>
+                    <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>-->
+                  
+
+
+
+
+
+                
+
+
+
+
+
+
             </div>
-            <h2>Notificaciones</h2>
-            <br>
-            <div class="noti">
-                <a href="#">Variable</a>
-                <br>
-                <a href="#">Variable</a>
-                <br>
-                <a href="#">Variable</a>
-                <br>
-                <!-- aca hay que colocar un clico por noti y modificar a lista con barra de movimiento-->
-            </div>
+        </div>
         </section>
-    </div>
-</div>
+
+
+
 
 {% endblock %}

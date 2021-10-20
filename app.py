@@ -181,3 +181,6 @@ def antes_de_cada_peticion():
         flash("Inicia sesión para continuar")
         return redirect("/Login")
     # Si ya ha iniciado, no hacemos nada, es decir lo dejamos pasar
+    
+if __name__ == "__main__":
+    app.run(debug=True) 
